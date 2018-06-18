@@ -1,0 +1,104 @@
+{% extends 'base/login_base.html' %}
+{% block title %}Nuevo Registro{% endblock %}
+ {% block content %}
+ <div id="login-box" class="login-box visible widget-box no-border">
+		<div class="widget-body">	
+			<div class="widget-main">
+				<h4 class="header blue lighter bigger">
+					<i class="ace-icon fa fa-users blue"></i>
+					Nuevo Registro</h4>
+
+						<div class="space-6"></div>
+
+						
+
+
+						 <form method="post">
+ 								{% csrf_token %}
+ 								{{form.as_p}}
+												<fieldset>
+												
+
+							<label class="block clearfix">
+											<span class="block input-icon input-icon-right">
+						<input  class="form-control" type="text" name= "first_name" placeholder="Nombre" />
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+					<input  class="form-control" type="text" name="last_name" placeholder="Apellido" />
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+
+
+														<label class="block clearfix">
+								<span class="block input-icon input-icon-right">
+
+		<input class="form-control" type="text" name="username" placeholder="Nombre de Usuario" />
+				<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+
+											<label class="block clearfix">
+											<span class="block input-icon input-icon-right">
+
+		<input class="form-control" type="text" name="email" placeholder="Correo" />
+				<i class="ace-icon fa fa-envelope"></i>
+														</span>
+													</label>
+
+															<label class="block clearfix">
+								<span class="block input-icon input-icon-right">
+
+		<input class="form-control" type="password" name="password1" placeholder="Contraseña" />
+				<i class= "ace-icon fa fa-lock"></i>
+														</span>
+													</label>
+
+			
+															<label class="block clearfix">
+								<span class="block input-icon input-icon-right">
+
+		<input class="form-control" type="password" name="password2" placeholder="Confirmar Contraseña" />
+				<i class= "ace-icon fa fa-retweet"></i>
+														</span>
+													</label>
+
+
+
+													
+													<div class="space-24"></div>
+
+													<div class="clearfix">
+														
+
+								<button  class="width-65 pull-right btn btn-sm btn-success" type="submit">
+								<span class="bigger-110">Registrarme</span>
+
+							<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+														</button>
+													</div>
+												</fieldset>
+											</form>
+
+																		</div><!-- /.widget-main -->
+
+											
+
+																	<div class="toolbar clearfix">
+																		<div>
+																			<a href="{% url 'login' %}" class="forgot-password-link">
+																				<i class="ace-icon fa fa-arrow-left"></i>
+																				Regresar al Login
+																			</a>
+																		</div>
+														</div><!-- /.toolbar -->
+
+
+										
+									</div><!-- /.widget-body -->
+								</div><!-- /.login-box -->
+   															 {% endblock%}

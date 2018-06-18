@@ -1,0 +1,79 @@
+{% extends 'base/login_base.html' %}
+
+ {% block content %}
+ <div id="login-box" class="login-box visible widget-box no-border">
+		<div class="widget-body">	
+			<div class="widget-main">
+				<h4 class="header blue lighter bigger">
+					<i class="ace-icon fa fa-bar-chart blue"></i>
+					Ingrese sus credenciales</h4>
+
+						<div class="space-6"></div>
+
+						<form class="login100-form validate-form" method="post">
+					{% csrf_token %}
+							<fieldset>
+								<label class="block clearfix">
+								<span class="block input-icon input-icon-right">
+								<input class="form-control"  type="text" placeholder="Usuario" name="username" />
+								<i class="ace-icon fa fa-user"></i>
+									</span>
+								</label>
+								<label class="block clearfix">
+								<span class="block input-icon input-icon-right">
+								<input  class="form-control" type="password" placeholder="Password" name="password"/>
+								<i class="ace-icon fa fa-lock"></i>
+								</span>
+								</label>
+								<div class="space"></div>
+								<div class="clearfix">
+								<button class="width-35 pull-right btn btn-sm btn-primary" type="submit">
+								<i class="ace-icon fa fa-key"></i>
+								<span class="bigger-110">Iniciar</span>
+								</button>
+																					</div>
+
+																					<div class="space-4"></div>
+																				</fieldset>
+							</form>
+
+																			<div class="social-or-login center">
+																				<span class="bigger-110">O inicia sesión usando</span>
+																			</div>
+
+																			<div class="space-6"></div>
+
+																			<div class="social-login center">
+																				<a class="btn btn-primary">
+																					<i class="ace-icon fa fa-facebook"></i>
+																				</a>
+
+																				<a class="btn btn-info">
+																					<i class="ace-icon fa fa-twitter"></i>
+																				</a>
+
+																				<a class="btn btn-danger">
+																					<i class="ace-icon fa fa-google-plus"></i>
+																				</a>
+																			</div>
+																		</div><!-- /.widget-main -->
+
+																	<div class="toolbar clearfix">
+																		<div>
+																			<a href="{% url 'usuario:contra' %}" class="forgot-password-link">
+																				<i class="ace-icon fa fa-arrow-left"></i>
+																				Olvide mi contraseña
+																			</a>
+																		</div>
+
+																	<div>
+																<a href="{% url 'usuario:registrarme' %}"  class="user-signup-link">
+																	<i class="ace-icon fa fa-arrow-right"></i>
+																			Registrarme
+																</a>
+															</div>
+														</div><!-- /.toolbar -->
+										
+									</div><!-- /.widget-body -->
+								</div><!-- /.login-box -->
+   															 {% endblock%}

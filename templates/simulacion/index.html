@@ -1,0 +1,128 @@
+{% extends 'base/base.html' %}
+
+    {% block title%}     INICIO  {% endblock %}
+     {% block cab%}     INICIO  {% endblock %}
+ {% block content %}
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ejemplo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+  	<div>
+  		<div class="container text-center">
+
+  		<h1>
+  			Bienvenido al sistema de simulacion de las variables Macroeconomicas
+  		</h1>
+  		<h1>
+  			Ante el alza del IVA.
+  		</h1>
+  		</div>
+  		<h2>
+  			Presiona para mas informacion.
+  			 <script type="text/javascript">
+      function informacion(name)
+      {
+        alert(name)
+      }
+    </script>
+  		</h2>
+
+  		<h2>
+  			 <button type="button" name="button" onclick="informacion('El usuario ingresara una serie de datos los cuales se usaran para realizar una simulacion de el comportamiento de estas variables con respecto al cambio del IVA., ')">Informacion</button>
+  		</h2>
+
+  		
+
+  	</div>
+      <div class="container text-center">
+        <br>
+        <h1>SIMULACION</h1>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <img class="img-thumbnail"  src="https://gcdn.emol.cl/educacion-para-ninos/files/2015/06/graficos-p.jpg" height="300" width="300"  alt="">
+              </div>
+              <div class="col-sm-4">
+                <img  class="img-thumbnail" src="https://gcdn.emol.cl/educacion-para-ninos/files/2015/06/graficos-p.jpg" height="300" width="300" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img  class="img-thumbnail" src="https://gcdn.emol.cl/educacion-para-ninos/files/2015/06/graficos-p.jpg" height="300" width="300" alt="">
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-sm-4">
+                <img class="img-thumbnail"  src="https://gcdn.emol.cl/educacion-para-ninos/files/2015/06/graficos-p.jpg" height="300" width="300"  alt="">
+              </div>
+              <div class="col-sm-4">
+                <img  class="img-thumbnail" src="https://gcdn.emol.cl/educacion-para-ninos/files/2015/06/graficos-p.jpg" height="300" width="300" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img  class="img-thumbnail" src="https://gcdn.emol.cl/educacion-para-ninos/files/2015/06/graficos-p.jpg" height="300" width="300" alt="">
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-sm-6">
+              	<h1>
+              		<a class="btn btn-primary" href="{% url 'simu:entradas' %}">Realizar Simulacion</a>
+              	</h1>
+                 
+              </div>
+              <div class="col-sm-6">
+              	<h1>
+              		 <a class="btn btn-primary" href="{% url 'simu:lista' %}">Ver catalogo de Simulaciones</a>
+              	</h1>
+            
+                
+              </div>
+              <div class="col-sm-6">
+               
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+
+
+      {% if datos %}
+ 		<h1>
+ 			SI HAY DATOS
+ 		</h1>
+ 		
+
+ 		<tr>
+ 			<li>DATOS Info:
+        <ul>
+          <li>Renta: {{DatoEntrada.renta}}</li>
+          <li>Poblacion: {{DatoEntrada.poblacion}}</li>
+          
+
+ 		
+ 		
+ 		{% endif %}
+
+
+  </body>
+</html>
+
+ 
+				
+
+
+			
+
+  {% endblock%}

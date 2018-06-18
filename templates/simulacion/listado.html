@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Listado{% endblock %}
+
+{% block cab%}    <h1>Listado de Simulaciones </h1>  {% endblock %}
+{% block content%}     
+<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nombre</th>
+			<th>Fecha</th>
+			<th>Usuario</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		{% if object_list %}
+		{% for sim in object_list %}
+		<tr>
+			<td>{{sim.id}}</td>
+			<td>{{sim.nombreSim}}</td>
+			<td>{{sim.fecha}}</td>
+			<td>{{sim.fecha}}</td>
+			<td>
+				<a class="btn btn-primary" href=#>Ver</a>
+				<a class="btn btn-danger" href="{% url 'simu:index' %}">Eliminar</a>
+			</td>
+		</tr>
+		{%endfor%}
+		{% else %}
+		<h2>La lista de simulaciones se encuentra vacía</h2>
+		{% endif %}
+	</tbody>
+</table>
+
+
+
+  {% endblock %}

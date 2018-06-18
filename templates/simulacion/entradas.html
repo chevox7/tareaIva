@@ -1,0 +1,26 @@
+
+{% extends 'base/base.html' %}
+{% block title %}Nueva Simulacion{% endblock %}
+ 
+ {% block cab%}     Entrada de Datos  {% endblock %}
+
+ {% block content %}
+ <div>
+ 	
+ <form method="post">
+ 	{% csrf_token %}
+ 	{{ form1.as_p }}
+ 	<button type="submit" name="btnSimular">Simular</button>
+ 	<button type="reset">Borrar Datos</button>
+ </form> 	
+
+<div>
+	
+
+
+</div>
+ </div>
+
+
+ {% endblock %}
+
